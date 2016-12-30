@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+    Route::get('/home', 'HomeController@index');
+});
+
+Route::get('auth/twitter', 'Auth\AuthController@redirectToProvider');
+Route::get('auth/twitter/callback', 'Auth\AuthController@handleProviderCallback');
