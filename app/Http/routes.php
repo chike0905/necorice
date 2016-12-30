@@ -22,3 +22,5 @@ Route::group(['middleware' => 'web'], function () {
 
 Route::get('auth/twitter', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/twitter/callback', 'Auth\AuthController@handleProviderCallback');
+
+Route::post('checkin', 'CheckinController@index');

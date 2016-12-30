@@ -12,8 +12,9 @@
                         <div id="message">位置情報の読み込み中です</div>
                         <form action="/checkin" method="post">
                             {!! csrf_field() !!}
-                            <input type="hidden" id="latitude" value="">
-                            <input type="hidden" id="longitude" value="">
+                            <input type="hidden" name="latitude" id="latitude" value="">
+                            <input type="hidden" name="longitude" id="longitude" value="">
+                            <input type="hidden" name="tweet" id="tweet" class="form-control" maxlength="140"><br/>
                             <input type="submit" class="btn btn-primary" value="Check in">
                         </form>
                     </div>
@@ -27,6 +28,7 @@
                             massage.innerHTML = "緯度:" + position.coords.latitude + "/ 経度:"+ position.coords.longitude;
                             document.getElementById("latitude").value = position.coords.latitude;
                             document.getElementById("longitude").value = position.coords.longitude;
+                            document.getElementById("tweet").type = "text";
                         }
                         if(navigator.geolocation){
                         // 現在位置を取得できる場合の処理

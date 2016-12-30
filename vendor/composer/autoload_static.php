@@ -302,6 +302,7 @@ class ComposerStaticInit6b12f577c7cd7392b5769f0dc380e19c
 
     public static $classMap = array (
         'AddTwitterColumnsToUser' => __DIR__ . '/../..' . '/database/migrations/2016_12_30_020116_add_twitter_columns_to_user.php',
+        'CheckinTable' => __DIR__ . '/../..' . '/database/migrations/2016_12_30_063649_checkin_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
